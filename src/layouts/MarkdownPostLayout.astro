@@ -7,8 +7,7 @@ const { frontmatter } = Astro.props;
     <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by {frontmatter.author}</p>
-    <div class="tag-container">
-        <p>Tags: </p>
+    <div class="tags">
         {frontmatter.tags.map((tag) => {
             return <TagBadge tag={tag} />
         })}
@@ -18,7 +17,7 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 
 <style>
-    .tag-container {
+    .tags {
         display: flex;
         gap: 0.5rem;
         margin: 2px 0;
