@@ -1,4 +1,5 @@
 ---
+import TagBadge from '../components/TagBadge.astro';
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
@@ -6,7 +7,21 @@ const { frontmatter } = Astro.props;
     <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
     <p><em>{frontmatter.description}</em></p>
     <p>Written by {frontmatter.author}</p>
-    <p>Tags: {frontmatter.tags.join(", ")}</p>
+    <div class="tag-container">
+        <p>Tags: </p>
+        {frontmatter.tags.map((tag) => {
+            return <TagBadge tag={tag} />
+        })}
+    </div>
     <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
     <slot />
 </BaseLayout>
+
+<style>
+    .tag-container {
+        display: flex;
+        gap: 0.5rem;
+        margin: 2px 0;
+        align-items: center;
+    }
+</style>
