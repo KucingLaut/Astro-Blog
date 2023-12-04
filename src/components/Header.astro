@@ -1,11 +1,18 @@
 ---
-import Hamburger from "./Hamburger.astro";
-import Navigation from "./Navigation.astro"
 import ThemeIcon from "./ThemeIcon.astro";
 ---
-
-<nav>
-    <Hamburger />
-    <ThemeIcon />
-    <Navigation />
-</nav>
+<div class="navbar bg-base-200">
+    <div class="container mx-auto">
+        <nav class="navbar-start">
+            <a href="/">Home</a>
+        </nav>
+        <nav class="navbar-center hidden lg:flex lg:gap-8">
+            <a href="/about/">About</a>
+            <a href="/blog/">Blog</a>
+            <a href="/tags/">Tags</a>
+        </nav>
+        <nav class="navbar-end flex">
+            <ThemeIcon />
+        </nav>
+    </div>
+</div>

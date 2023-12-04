@@ -1,18 +1,13 @@
 ---
-import Social from "./Social.astro";
-const platform = "github";
-const username = "withastro";
+import InstagramIcon from "./InstagramIcon.astro";
+import GithubIcon from "./GithubIcon.astro";
 ---
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer>
-  <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+<footer class="footer footer-center p-4 bg-base-300 text-base-content">
+  <nav>
+      <div class="grid grid-flow-col gap-4">
+        <a href={`https://www.instagram.com/kyuda98`}><InstagramIcon /></a>
+        <a href={`https://www.github.com/KucingLaut`}><GithubIcon/></a>
+      </div>
+      <p>Copyright © 2023 - All right reserved</p>
+  </nav>
 </footer>
