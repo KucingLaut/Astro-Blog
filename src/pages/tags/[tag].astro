@@ -18,8 +18,8 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
-<BaseLayout pageTitle={tag}>
-  <h1 class="text-3xl mb-4 font-bold">Posts tagged with "<span class="font-bold">{tag}</span>"</h1>
+<BaseLayout pageTitle={`Tag: ${tag}`}>
+  <h1 class="page-title">Posts tagged with "<span class="font-bold">{tag}</span>"</h1>
   {posts.map((post) => <BlogPostCard 
     url={post.url}
     title={post.frontmatter.title} 

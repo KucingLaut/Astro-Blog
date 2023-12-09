@@ -1,9 +1,13 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const {pageTitle} = Astro.props
 ---
 <html lang="en">
     <head>
+        <title>{pageTitle ? `${pageTitle} | CatBlog` : "CatBlog"}</title>
         <script is:inline>
             if (localStorage.getItem("theme") === null) {
                 document.documentElement.setAttribute("data-theme", "dark");
