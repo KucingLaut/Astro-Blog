@@ -3,21 +3,27 @@ import TagBadge from '../components/TagBadge.astro';
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 
-// get all posts
-const allPosts = await Astro.glob('../pages/posts/*.md')
+function dateToString(str) {
+    const dateArray = str.split('-')
+    const newDate = new Date(parseInt(dateArray[0]), parseInt(dateArray[1])-1, parseInt(dateArray[2]));
+    return new Intl.DateTimeFormat('en-GB', {
+        dateStyle: 'full',
+        timeZone: 'Australia/Sydney',
+    }).format(newDate);
+}
+const dateDisplay = dateToString(frontmatter.pubDate.slice(0,10))
 ---
 <BaseLayout>
-    <h1>{frontmatter.title}</h1>
-    <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
+    <h1 class="page-title">{frontmatter.title}</h1>
+    <p>{dateDisplay} | {frontmatter.author}</p>
     <p><em>{frontmatter.description}</em></p>
-    <p>Written by {frontmatter.author}</p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <slot />
     <div class="tags">
         {frontmatter.tags.map((tag) => {
             return <TagBadge tag={tag} />
         })}
     </div>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-    <slot />
 </BaseLayout>
 
 <style>

@@ -7,7 +7,7 @@ const {pageTitle} = Astro.props
 ---
 <html lang="en">
     <head>
-        <title>{pageTitle ? `${pageTitle} | CatBlog` : "CatBlog"}</title>
+        <title>{pageTitle ? `${pageTitle} | CatsualBlogging` : "CatsualBlogging"}</title>
         <script is:inline>
             if (localStorage.getItem("theme") === null) {
                 document.documentElement.setAttribute("data-theme", "dark");
@@ -29,7 +29,7 @@ const {pageTitle} = Astro.props
     <body>
         <div class="flex flex-col h-screen">
             <Header />
-            <div class=" flex-grow w-[90%] sm:w-[80%] mx-auto max-w-[820px] py-4">
+            <div class="flex-grow w-[90%] sm:w-[80%] mx-auto max-w-[820px] py-4">
                 <slot />
             </div>
             <Footer />
