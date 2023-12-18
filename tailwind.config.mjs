@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	darkMode: 'class',
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			boxShadow: {
+				'border': '0px 0px 0px 4px rgba(0,0,0,1)',
+			}
+		},
 	},
 	plugins: [require("daisyui")],
 	daisyui: {

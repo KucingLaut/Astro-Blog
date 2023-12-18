@@ -2,7 +2,7 @@
 const {url, title, pubDate, image, description, tags} = Astro.props;
 ---
 <a href={url}>
-    <div class="card bg-base-100 shadow-xl">
+    <div class="card bg-base-100 shadow-xl hover:shadow-border dark:hover:shadow-white">
         <figure>
             <img src={image.url} alt={image.alt} />
         </figure>
