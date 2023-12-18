@@ -1,16 +1,25 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro";
 ---
-<div class="navbar bg-base-200 p-0">
+<div class="navbar p-0">
     <div class="w-[90%] sm:w-[80%] mx-auto max-w-[820px]">
-        <nav class="navbar-start">
-            <a href="/" class="font-bold text-lg">Catsual Blogging</a>
+        <nav class="flex-1">
+            <a href="/" class="font-bold text-xl">Catsual Blogging</a>
         </nav>
-        <nav class="navbar-center flex gap-8 sm:gap-16 lg:gap-24 justify-evenly">
-            <a href="/posts/">Posts</a>
-            <a href="/tags/">Tags</a>
-        </nav>
-        <nav class="navbar-end flex">
+        <nav class="flex-none flex flex-row-reverse sm:flex-row gap-8">
+            <div tabindex="0" role="button" class="dropdown dropdown-end sm:hidden">
+                <div class="btn btn-ghost sm:hidden align-middle">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0"  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-[300px] align-center">
+                    <li><a href="/posts/"><span class="font-bold text-xl">Posts</span></a></li>
+                    <li><a href="/tags/"><span class="font-bold text-xl">Tags</span></a></li>
+                </ul>
+            </div>
+            <div class="hidden sm:flex sm:gap-8 flex-none">                 
+                <a href="/posts/"><span class="font-bold text-xl">Posts</span></a>
+                <a href="/tags/"><span class="font-bold text-xl">Tags</span></a>
+            </div>
             <ThemeIcon />
         </nav>
     </div>
