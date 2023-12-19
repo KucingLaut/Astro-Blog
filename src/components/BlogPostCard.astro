@@ -12,7 +12,7 @@ const {url, title, pubDate, image, description, tags} = Astro.props;
             <p>{description}</p>
             <div class="card-actions justify-end">
                 {tags.map((tag) => 
-                    <div class="badge badge-outline">{tag}</div>
+                    <div class="badge badge-primary badge-outline">{tag}</div>
                 )}
             </div>
         </div>

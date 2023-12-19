@@ -12,7 +12,32 @@ export default {
 	},
 	plugins: [require("daisyui"), require('@tailwindcss/typography')],
 	daisyui: {
-		themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+		themes: [
+			{
+				light: {
+					"primary": "#006CAC",
+					"secondary": "#00544f",
+					"accent": "#00d6c9",
+					"neutral": "#fbfbfb",
+					"base-100": "#fbfbfb",
+					"info": "#00c7b5",
+					"success": "#22c55e",
+					"warning": "#fcd34d",
+					"error": "#f43f5e",
+				},
+				dark: {
+					"primary": "#00ffe6",
+					"secondary": "#52da84",
+					"accent": "#ece141",
+					"neutral": "#161718",
+					"base-100": "#161718",
+					"info": "#00c7b5",
+					"success": "#22c55e",
+					"warning": "#fcd34d",
+					"error": "#f43f5e",
+				}
+			},
+		],
 		darkTheme: "dark", // name of one of the included themes for dark mode
 		base: true, // applies background color and foreground color for root element by default
 		styled: true, // include daisyUI colors and design decisions for all components

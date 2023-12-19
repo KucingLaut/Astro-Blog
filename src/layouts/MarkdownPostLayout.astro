@@ -22,17 +22,9 @@ const dateDisplay = dateToString(frontmatter.pubDate.slice(0,10))
         <slot />
     </article>
     <div class="tags">
+        <p>Tags</p>
         {frontmatter.tags.map((tag) => {
             return <TagBadge tag={tag} />
         })}
     </div>
 </BaseLayout>
-
-<style>
-    .tags {
-        display: flex;
-        gap: 0.5rem;
-        margin: 2px 0;
-        align-items: center;
-    }
-</style>

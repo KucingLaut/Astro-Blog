@@ -11,7 +11,7 @@ const allPost = await Astro.glob('../pages/posts/*.md')
 			<h2>Welcome to my blog. I write random stuff from food to life!</h2>
 		</div>
 		<div class="flex flex-col">
-			<h1 class="page-title">Recent Posts</h1>
+			<h1 class="page-subtitle">Recent Posts</h1>
 			<div class="flex flex-col gap-8">
 				{allPost.slice(0,3).map((post) => 
 					<BlogPostCard 
