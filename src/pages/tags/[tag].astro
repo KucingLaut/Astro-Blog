@@ -20,11 +20,13 @@ const { posts } = Astro.props;
 ---
 <BaseLayout pageTitle={`Tag: ${tag}`}>
   <h1 class="page-title">Posts tagged with "<span class="font-bold">{tag}</span>"</h1>
-  {posts.map((post) => <BlogPostCard 
+  <div class="flex flex-col gap-8">
+    {posts.map((post) => <BlogPostCard 
     url={post.url}
     title={post.frontmatter.title} 
     pubDate  = {post.frontmatter.pubDate}
     image = {post.frontmatter.image}
     description = {post.frontmatter.description}
     tags = {post.frontmatter.tags}/>)}
+  </div>
 </BaseLayout>

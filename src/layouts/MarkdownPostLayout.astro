@@ -21,8 +21,7 @@ const dateDisplay = dateToString(frontmatter.pubDate.slice(0,10))
     <article class="prose sm:prose-xl">
         <slot />
     </article>
-    <div class="tags">
-        <p>Tags</p>
+    <div class="tags pt-4">
         {frontmatter.tags.map((tag) => {
             return <TagBadge tag={tag} />
         })}

@@ -5,9 +5,9 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				'border-thick': '0px 0px 0px 4px rgba(0,0,0,1)',
-				'border-thin': '0px 0px 0px 2px rgba(0,0,0,1)',
-			}
+				'border-thick': '0px 0px 0px 4px',
+				'border-thin': '0px 0px 0px 2px',
+			},
 		},
 	},
 	plugins: [require("daisyui"), require('@tailwindcss/typography')],
