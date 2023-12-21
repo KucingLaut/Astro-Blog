@@ -14,14 +14,15 @@ function dateToString(str) {
 const dateDisplay = dateToString(frontmatter.pubDate.slice(0,10))
 ---
 <BaseLayout>
-    <h1 class="page-title">{frontmatter.title}</h1>
-    <p>{dateDisplay} | {frontmatter.author}</p>
-    <p><em>{frontmatter.description}</em></p>
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
-    <article class="prose sm:prose-xl">
+    <div class="blog-title-section">
+        <h1 class="blog-title">{frontmatter.title}</h1>
+        <p class="blog-date-publisher">{dateDisplay} | {frontmatter.author}</p>
+    </div>
+    <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
+    <article class="blog-markdown-section">
         <slot />
     </article>
-    <div class="tags pt-4">
+    <div class="blog-tag-section">
         {frontmatter.tags.map((tag) => {
             return <TagBadge tag={tag} />
         })}

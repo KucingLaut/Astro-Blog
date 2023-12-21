@@ -4,7 +4,7 @@
 
 @layer base {
     .my-container {
-        @apply w-[90%] sm:w-[80%] mx-auto max-w-[960px]
+        @apply w-[90%] sm:w-[80%] mx-auto max-w-[960px] 
     }
 
     .page-subtitle {
@@ -12,10 +12,38 @@
     }
 
     .page-title {
-        @apply text-5xl sm:text-6xl mb-4 font-bold text-primary pb-4 sm:pb-8
+        @apply text-5xl sm:text-6xl mb-4 font-bold text-primary py-4 sm:py-8
     }
 
     .page-title-home {
         @apply text-5xl sm:text-6xl mb-4 font-bold text-primary sm:pb-8
+    }
+
+    .blog-title-section {
+        @apply py-4 sm:py-8 text-center
+    }
+
+    .blog-title {
+        @apply text-5xl sm:text-6xl mb-4 font-bold text-primary
+    }
+
+    .blog-date-publisher {
+        @apply text-xl
+    }
+
+    .blog-image {
+        @apply pb-4 sm:pb-8
+    }
+
+    .blog-markdown-section {
+        @apply prose sm:prose-xl max-w-none text-justify
+    }
+
+    .blog-tags-section {
+        @apply py-4 sm:py-8
+    }
+
+    .prose img {
+        @apply align-middle justify-center self-center mx-auto
     }
 }
