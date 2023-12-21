@@ -1,7 +1,19 @@
 ---
 ---
-<div class="hamburger">
+<div class="flex flex-col gap-2">
     <span class="line"></span>
     <span class="line"></span>
     <span class="line"></span>
 </div>
+
+<style>
+    .line {
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        display:block;
+        border-radius: 2px;
+    }
+
+    :global(.dark) .line { background-color: white; }
+</style>
