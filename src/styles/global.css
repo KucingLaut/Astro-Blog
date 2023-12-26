@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        font-family: 'Inter Variable', 'BIZ UDPGothic', sans-serif;
+      }
+
     .my-container {
         @apply w-[90%] sm:w-[80%] mx-auto max-w-[960px] 
     }
