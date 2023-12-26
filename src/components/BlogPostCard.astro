@@ -2,9 +2,9 @@
 const {url, title, pubDate, image, description, tags} = Astro.props;
 ---
 <a href={url}>
-    <div class="card bg-base-100 shadow-border-thin hover:shadow-border-thick dark:shadow-white">
+    <div class="card card-compact bg-base-100 shadow-border-thin hover:shadow-border-thick dark:shadow-white">
         <figure>
-            <img src={image.url} alt={image.alt} />
+            <img src={image.url} alt={image.alt}/>
         </figure>
         <div class="card-body">
             <h2 class="card-title">{title}</h2>
