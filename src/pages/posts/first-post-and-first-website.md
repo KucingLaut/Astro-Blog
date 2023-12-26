@@ -5,7 +5,7 @@ pubDate: "2023-12-26"
 description: 'Yep. This is the first post!'
 author: 'Me'
 image:
-    url: '/src/assets/verycutecat.jpg'
+    url: '/images/verycutecat.jpg'
     alt: 'This is my cat.'
 tags: ["blog", "first post", "life"]
 ---
