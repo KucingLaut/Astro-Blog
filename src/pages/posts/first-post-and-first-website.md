@@ -23,7 +23,7 @@ Blog is named "Catsual Blogging" for now. Why, you ask? Because I want to casual
 
 # What can we expect from this blog?
 
-I plan to write things that too long and complex to write to Twitter. Maybe something like small or big trips I made that is interesting, foods that I found interesting, things I found interesting, software engineering stuff (including what I work with at office or outside office), rants, anything. I hope to update here at least once a month.
+I plan to write things that too long and complex to write to Twitter. Maybe something like small or big trips I made that is interesting, foods that I found interesting, things I found interesting, software engineering stuff (including what I work with at office or outside office), rants, anything. I hope to update here at least once a month. I am also going to add few elements here and there, so expect some changes in UI.
 
 # What's happening now?
 
