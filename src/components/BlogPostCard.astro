@@ -1,14 +1,23 @@
 ---
 const {url, title, pubDate, image, description, tags} = Astro.props;
+function dateToString(str) {
+    const dateArray = str.split('-')
+    const newDate = new Date(parseInt(dateArray[0]), parseInt(dateArray[1])-1, parseInt(dateArray[2]));
+    return new Intl.DateTimeFormat('en-GB', {
+        dateStyle: 'full',
+        timeZone: 'Australia/Sydney',
+    }).format(newDate);
+}
+const dateDisplay = dateToString(pubDate.slice(0,10))
 ---
 <a href={url}>
     <div class="card card-compact bg-base-100 shadow-border-thin hover:shadow-border-thick dark:shadow-white">
-        <figure>
+        <figure class="max-h-72 lg:max-h-[36rem]">
             <img src={image.url} alt={image.alt}/>
         </figure>
         <div class="card-body">
-            <h2 class="card-title">{title}</h2>
-            <p>{pubDate}</p>
+            <h2 class="card-title text-primary">{title}</h2>
+            <p>{dateDisplay}</p>
             <p>{description}</p>
             <div class="card-actions justify-end">
                 {tags.map((tag) => 

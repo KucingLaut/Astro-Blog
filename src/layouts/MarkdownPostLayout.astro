@@ -1,6 +1,7 @@
 ---
 import TagBadge from '../components/TagBadge.astro';
 import BaseLayout from './BaseLayout.astro';
+
 const { frontmatter } = Astro.props;
 
 function dateToString(str) {
@@ -16,7 +17,7 @@ const dateDisplay = dateToString(frontmatter.pubDate.slice(0,10))
 <BaseLayout>
     <div class="blog-title-section">
         <h1 class="blog-title">{frontmatter.title}</h1>
-        <p class="blog-date-publisher">{dateDisplay} | {frontmatter.author}</p>
+        <p class="blog-date-publisher">{dateDisplay}</p>
     </div>
     <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt} />
     <article class="blog-markdown-section">

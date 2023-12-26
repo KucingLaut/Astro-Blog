@@ -32,7 +32,15 @@
     }
 
     .blog-markdown-section {
-        @apply prose sm:prose-xl max-w-none text-justify
+        @apply prose sm:prose-xl max-w-none
+    }
+
+    .blog-markdown-section a {
+        @apply text-primary
+    }
+
+    .blog-markdown-section p {
+        @apply text-justify
     }
 
     .blog-tags-section {
