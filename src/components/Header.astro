@@ -8,15 +8,15 @@ import ThemeIcon from "./ThemeIcon.astro";
             <a href="/" class="font-bold text-xl">Catsual Blogging</a>
         </nav>
         <nav class="flex-none flex flex-row-reverse sm:flex-row sm:gap-8">
-            <div tabindex="0" role="button" class="dropdown dropdown-end sm:hidden">
-                <div class="btn btn-ghost sm:hidden align-middle">
+            <details tabindex="0" role="button" class="dropdown dropdown-end sm:hidden">
+                <summary class="btn btn-ghost sm:hidden align-middle" id="dropdown-btn">
                     <Hamburger />
-                </div>
+                </summary>
                 <ul tabindex="0"  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-[300px] align-center">
                     <li><a href="/posts/"><span class="font-bold text-xl">Posts</span></a></li>
                     <li><a href="/tags/"><span class="font-bold text-xl">Tags</span></a></li>
                 </ul>
-            </div>
+            </details>
             <div class="hidden sm:flex sm:gap-8 flex-none self-center">                 
                 <a href="/posts/"><span class="font-bold text-xl">Posts</span></a>
                 <a href="/tags/"><span class="font-bold text-xl">Tags</span></a>
@@ -25,3 +25,13 @@ import ThemeIcon from "./ThemeIcon.astro";
         </nav>
     </div>
 </div>
+
+<script is:inline>
+    window.addEventListener('click', function(e) {
+        document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.open = false;
+            }
+        });
+    });
+</script>
